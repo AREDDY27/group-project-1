@@ -6,7 +6,7 @@
     font-family: 'poppins', sans-serif;
 }
 
-body{
+.header{
      width: 0;
      height: 0;
      background-image: url(group-project-1/Resources/BeamCity.png);
