@@ -12,10 +12,7 @@ body{
      background-image: url(group-project-1/Resources/BeamCity.png);
      background-size: cover;
      background-position: center;
-     background-attachment: fixed;
-     min-height: 100vh;
-     
- }
+     }
  nav{
      width: 100%;
      padding: 20px 0;
