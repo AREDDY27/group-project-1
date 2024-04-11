@@ -11,6 +11,18 @@
     background-image: url(./resources/BeamCity.png);
     background-position: center;
     background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 100px; /* Adjust this value to place the text below the navbar */
+    width: 100%;
+    text-align: center;
+    color: white; /* Text color */
+    font-size: 4em; /* Text size */
+    font-weight: bold;
+    letter-spacing: 2px; /* Optional: adds spacing between letters */
 }
 
 nav{
