@@ -16,13 +16,13 @@
 
 .hero-text {
     position: absolute;
-    top: 300px; /* Adjust this value to place the text below the navbar */
+    top: 300px; 
     width: 100%;
     text-align: center;
-    color: white; /* Text color */
-    font-size: 4em; /* Text size */
+    color: white; 
+    font-size: 4em; 
     font-weight: bold;
-    letter-spacing: 2px; /* Optional: adds spacing between letters */
+    letter-spacing: 2px; 
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
@@ -74,16 +74,16 @@ nav.sticky ul{
     width: auto;
 }
 
-/* Style for the menu items */
+
 .menu-item {
-    color: #fff; /* White color for the text */
-    text-decoration: none; /* No underline */
-    font-weight: bold; /* Optionally make the font bold */
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold; 
 }
 
 .menu-item:hover, .footer-content a:hover {
-    color: #000000; /* Lighter color on hover for visual feedback */
-    text-decoration: underline; /* Optionally underline on hover */
+    color: #000000; 
+    text-decoration: underline; 
 }
 
 .flexbox-container {
@@ -96,7 +96,7 @@ nav.sticky ul{
 
 .flexbox {
     flex: 1;
-    min-width: calc(33.333% - 10px); /* Adjust the min-width for proper spacing */
+    min-width: calc(33.333% - 10px); 
     background-color: white;
     padding: 15px;
     border-radius: 5px;
@@ -109,7 +109,7 @@ nav.sticky ul{
 }
 
 .flexbox h2::before {
-    content: "★"; /* Example: Star symbol */
+    content: "★"; 
     display: inline-block;
     margin-right: 10px;
     color: #8E44AD;
@@ -117,12 +117,12 @@ nav.sticky ul{
 
 .jerseys {
     position: relative;
-    width: 60%; /* Adjust based on your layout */
+    width: 60%; 
     margin: auto;
 }
 
 .jersey img {
-    width: 100%; /* Adjust as needed */
+    width: 100%; 
     display: block;
 }
 
@@ -130,7 +130,7 @@ nav.sticky ul{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* Style your button as needed */
+    
 }
 
 #prevJersey {
@@ -142,13 +142,13 @@ nav.sticky ul{
 }
 
 #history .team-history {
-    padding-left: 20px; /* Adjusts the indentation of the list */
-    color: #333; /* Dark gray color for text */
-    font-size: 16px; /* Adjusts the font size */
+    padding-left: 20px; 
+    color: #333; 
+    font-size: 16px; 
 }
 
 #history .team-history li {
-    margin-bottom: 10px; /* Adds space between list items */
+    margin-bottom: 10px; 
 }
 
 #history .team-history li:first-child {
@@ -156,16 +156,15 @@ nav.sticky ul{
 }
 
 #history .team-history li:last-child {
-    color: #7D3C98; /* Dark purple */
+    color: #7D3C98; 
 }
 
 .team-history li:nth-child(odd) {
-    background-color: #EDE7F6; /* Light purple background for odd items */
+    background-color: #EDE7F6; 
 }
-
 #schedule img {
-    max-width: 100%; /* Ensures the image is no wider than its container */
-    height: auto; /* Maintains the image's aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }
 
 .subscription-form {
@@ -189,12 +188,12 @@ form input[type="email"] {
 
 form input[type="email"]:focus {
     outline: none;
-    border: 2px solid #8E44AD; /* Highlight input box when focused */
+    border: 2px solid #8E44AD; 
 }
 
 form input[type="email"]::placeholder {
-    color: #7F8C8D; /* Light grey */
-    opacity: 1; /* Ensure full opacity */
+    color: #7F8C8D; 
+    opacity: 1; 
 }
 
 form button {
@@ -206,8 +205,8 @@ form button {
 }
 
 form button:hover {
-    background-color: #9B59B6; /* Slightly lighter purple */
-    cursor: pointer; /* Change cursor to indicate clickable item */
+    background-color: #9B59B6; 
+    cursor: pointer; 
 }
 
 footer {
