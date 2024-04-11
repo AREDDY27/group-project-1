@@ -2,80 +2,52 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Project 1: Webpage</title>
+    <title>TEST: Webpage</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="group-project-1/Resources/Logo.png" type="image/png">
 </head>
 <body>
     <div class="header">
         <nav id="navbar">
-            <img src="group-project-1/Resources/Logo.png" class="logo" alt="Logo">
+            <img src="./resources/Logo.png" alt="Logo" class="logo">
             <ul id="menu">
-                <li>HOME</li>
-                <li>LIGHT THE BEAM</li>
-                <li>TEAM STORE</li>
-                <li>LOGIN</li>
+                <li><a href="#" class="menu-item">HOME</a></li>
+                <li><a href="#" class="menu-item">LIGHT THE BEAM</a></li>
+                <li><a href="#" class="menu-item">TEAM STORE</a></li>
+                <li><a href="#" class="menu-item">LOGIN</a></li>
            </ul>
         </nav>
     </div>
     <section class="flexbox-container">
-            <div class="flexbox" id="uniforms-section">
-                <h2>Uniforms Over The Years</h2>
-                	<div class="flexbox" id="uniforms-gallery">
-
-			    <input type="radio" name="jersey" id="jersey1" checked>
-			    <input type="radio" name="jersey" id="jersey2">
-			    <input type="radio" name="jersey" id="jersey3">
-			    <input type="radio" name="jersey" id="jersey4">
-			    <input type="radio" name="jersey" id="jersey5">
-			    <input type="radio" name="jersey" id="jersey6">
-			    <input type="radio" name="jersey" id="jersey7">
-    
-			    <!-- Jerseys -->
-			    <div class="jerseys">
-			        <label for="jersey7" class="prev">&#10094;</label>
-			        <label for="jersey2" class="next">&#10095;</label>
-			        <div class="jersey" style="background-image: url('Jersey1.png');"></div>
-			    </div>
-			    <div class="jerseys">
-			        <label for="jersey1" class="prev">&#10094;</label>
-			        <label for="jersey3" class="next">&#10095;</label>
-			        <div class="jersey" style="background-image: url('Jersey2.png');"></div>
-			    </div>
-			    <div class="jerseys">
-			        <label for="jersey2" class="prev">&#10094;</label>
-			        <label for="jersey4" class="next">&#10095;</label>
-			        <div class="jersey" style="background-image: url('Jersey3.png');"></div>
-			    </div>
-			    <div class="jerseys">
-			        <label for="jersey3" class="prev">&#10094;</label>
-			        <label for="jersey5" class="next">&#10095;</label>
-			        <div class="jersey" style="background-image: url('Jersey4.png');"></div>
-			    </div>
-			    <div class="jerseys">
-			        <label for="jersey4" class="prev">&#10094;</label>
-			        <label for="jersey6" class="next">&#10095;</label>
-			        <div class="jersey" style="background-image: url('Jersey5.png');"></div>
-			    </div>
-			    <div class="jerseys">
-			        <label for="jersey5" class="prev">&#10094;</label>
-			        <label for="jersey7" class="next">&#10095;</label>
-			        <div class="jersey" style="background-image: url('Jersey6.png');"></div>
-			    </div>
-			    <div class="jerseys">
-			        <label for="jersey6" class="prev">&#10094;</label>
-			        <label for="jersey1" class="next">&#10095;</label>
- 			       <div class="jersey" style="background-image: url('Jersey7.png');"></div>
-			    </div>
+	    <div class="flexbox" id="uniforms">
+    		<h2>Uniforms Over The Years</h2>
+		    <h6>Click the arrows to scroll through</h6>
+    			<div class="jerseys">
+        			<div class="jersey" style="display: block;"><img src="./resources/Jersey1.png" alt="Jersey 1"></div>
+       			 	<div class="jersey" style="display: none;"><img src="./resources/Jersey2.png" alt="Jersey 2"></div>
+        			<div class="jersey" style="display: none;"><img src="./resources/Jersey3.png" alt="Jersey 3"></div>
+        			<div class="jersey" style="display: none;"><img src="./resources/Jersey4.png" alt="Jersey 4"></div>
+        			<div class="jersey" style="display: none;"><img src="./resources/Jersey5.png" alt="Jersey 5"></div>
+        			<div class="jersey" style="display: none;"><img src="./resources/Jersey6.png" alt="Jersey 6"></div>
+        			<div class="jersey" style="display: none;"><img src="./resources/Jersey7.png" alt="Jersey 7"></div>
+    			
+    				<button id="prevJersey">&#10094;</button>
+    				<button id="nextJersey">&#10095;</button>
 			</div>
+	    </div>
 
             <div class="flexbox" id="history">
-                <h2>History of The Team</h2>
-                <!-- Content goes here -->
-            </div>
+    <h2>History of The Team</h2>
+    <ol class="team-history">
+        <li>Franchise began in 1923 as the Rochester Royals.</li>
+        <li>Team relocated several times throughout the US: Cincinnati Royals, Kansas City Kings, Sacramento Kings.</li>
+        <li>In 1951, the franchise won their one and only championship.</li>
+        <li>Slamson the Lion (the "King of the Jungle") is the team's current mascot.</li>
+        <li>The team is dedicated to giving back to the community in various philanthropic efforts and activities.</li>
+    </ol>
+</div>
             <div class="flexbox" id="schedule">
                 <h2>2023-2024 Schedule</h2>
-                <img src="group-project-1/Resources/Schedule.jpg" alt="2023-2024 Schedule">
+	        	<img src="./resources/Schedule.jpg" alt="2023-2024 Schedule">
             </div>
         </section>
     <p class="text">
@@ -111,12 +83,37 @@
 				var menu = document.getElementById("menu");
         
         window.onscroll = function(){
-        		if(window.pageYOffset >= menu.offsetTop){
+        		if(window.pageYOffset >= navbar.offsetHeight){
             		navbar.classList.add("sticky");
             }
             else{
             		navbar.classList.remove("sticky")
             }
+        };
+
+	    document.getElementById('nextJersey').addEventListener('click', function() {
+            const jerseys = document.querySelectorAll('.jersey');
+            let currentIndex = findVisibleJersey(jerseys);
+            jerseys[currentIndex].style.display = 'none'; // Hide current jersey
+            const nextIndex = (currentIndex + 1) % jerseys.length; // Calculate next index, cycle back to 0 if at the end
+            jerseys[nextIndex].style.display = 'block'; // Show next jersey
+        });
+
+        document.getElementById('prevJersey').addEventListener('click', function() {
+            const jerseys = document.querySelectorAll('.jersey');
+            let currentIndex = findVisibleJersey(jerseys);
+            jerseys[currentIndex].style.display = 'none'; // Hide current jersey
+            const prevIndex = (currentIndex - 1 + jerseys.length) % jerseys.length; // Calculate previous index, cycle to the end if at the beginning
+            jerseys[prevIndex].style.display = 'block'; // Show previous jersey
+        });
+
+        function findVisibleJersey(jerseys) {
+            for (let i = 0; i < jerseys.length; i++) {
+                if (jerseys[i].style.display === 'block' || getComputedStyle(jerseys[i]).display === 'block') {
+                    return i;
+                }
+            }
+            return 0; // Default to first jersey if none are visible (shouldn't happen in this setup)
         }
         
     </script>
@@ -142,4 +139,3 @@
     
 </body>
 </html>
-
