@@ -16,7 +16,7 @@
 
 .hero-text {
     position: absolute;
-    top: 150px; /* Adjust this value to place the text below the navbar */
+    top: 300px; /* Adjust this value to place the text below the navbar */
     width: 100%;
     text-align: center;
     color: white; /* Text color */
